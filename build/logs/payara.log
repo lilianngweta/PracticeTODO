@@ -1,0 +1,303 @@
+[INFO] Listening for transport dt_socket at address: 8000
+[INFO] Found populator: org.glassfish.kernel.embedded.EmbeddedDomainXml
+[ERROR] Jun 19, 2016 11:40:41 AM org.jvnet.hk2.config.ConfigParser handleElement
+[ERROR] SEVERE: Ignoring unrecognized element jms-service at Line number = 101
+[ERROR] Column number = 72
+[ERROR] System Id = null
+[ERROR] Public Id = null
+[ERROR] Location Uri= null
+[ERROR] CharacterOffset = 5783
+[ERROR] 
+[ERROR] Jun 19, 2016 11:40:41 AM org.glassfish.security.services.impl.authorization.AuthorizationServiceImpl initialize
+[ERROR] INFO: Authorization Service has successfully initialized.
+[ERROR] Jun 19, 2016 11:40:42 AM org.hibernate.validator.internal.util.Version <clinit>
+[ERROR] INFO: HV000001: Hibernate Validator 5.1.2.Final
+[ERROR] Jun 19, 2016 11:40:44 AM org.glassfish.grizzly.config.Utils newInstance
+[ERROR] WARNING: Instance could not be initialized. Class=interface org.glassfish.grizzly.http.server.AddOn, name=http-listener, realClassName=org.glassfish.grizzly.http2.Http2AddOn
+[ERROR] Jun 19, 2016 11:40:44 AM com.sun.enterprise.v3.services.impl.GrizzlyService createNetworkProxy
+[ERROR] INFO: Network listener https-listener on port 0 disabled per domain.xml
+[ERROR] Jun 19, 2016 11:40:44 AM com.sun.enterprise.v3.admin.adapter.AdminEndpointDecider setGuiContextRoot
+[ERROR] INFO: Admin Console Adapter: context root: /admin
+[ERROR] Jun 19, 2016 11:40:44 AM com.sun.enterprise.v3.admin.adapter.AdminEndpointDecider setGuiContextRoot
+[ERROR] INFO: Admin Console Adapter: context root: /admin
+[ERROR] Jun 19, 2016 11:40:44 AM com.sun.enterprise.v3.admin.adapter.AdminEndpointDecider setGuiContextRoot
+[ERROR] INFO: Admin Console Adapter: context root: /admin
+[ERROR] Jun 19, 2016 11:40:45 AM com.sun.enterprise.v3.server.AppServerStartup postStartupJob
+[ERROR] INFO: Undefined Product Name - define product and version info in config/branding  0.0.0.0.0  (0) startup time : Embedded (7,299ms), startup services(2,454ms), total(9,753ms)
+[ERROR] Jun 19, 2016 11:40:45 AM com.sun.enterprise.v3.server.AppServerStartup postStartupJob
+[ERROR] SEVERE: Shutting down server due to startup exception
+[ERROR] java.net.BindException: Address already in use
+[ERROR] at sun.nio.ch.Net.bind0(Native Method)
+[ERROR] at sun.nio.ch.Net.bind(Net.java:433)
+[ERROR] at sun.nio.ch.Net.bind(Net.java:425)
+[ERROR] at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+[ERROR] at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+[ERROR] at org.glassfish.grizzly.nio.transport.TCPNIOBindingHandler.bindToChannelAndAddress(TCPNIOBindingHandler.java:131)
+[ERROR] at org.glassfish.grizzly.nio.transport.TCPNIOBindingHandler.bind(TCPNIOBindingHandler.java:88)
+[ERROR] at org.glassfish.grizzly.nio.transport.TCPNIOTransport.bind(TCPNIOTransport.java:248)
+[ERROR] at org.glassfish.grizzly.nio.transport.TCPNIOTransport.bind(TCPNIOTransport.java:237)
+[ERROR] at org.glassfish.grizzly.nio.transport.TCPNIOTransport.bind(TCPNIOTransport.java:86)
+[ERROR] at org.glassfish.grizzly.config.GenericGrizzlyListener.start(GenericGrizzlyListener.java:185)
+[ERROR] at com.sun.enterprise.v3.services.impl.GlassfishNetworkListener.start(GlassfishNetworkListener.java:110)
+[ERROR] at com.sun.enterprise.v3.services.impl.GrizzlyProxy.start0(GrizzlyProxy.java:267)
+[ERROR] at com.sun.enterprise.v3.services.impl.GrizzlyProxy.start(GrizzlyProxy.java:241)
+[ERROR] at com.sun.enterprise.v3.services.impl.GrizzlyService.createNetworkProxy(GrizzlyService.java:567)
+[ERROR] at com.sun.enterprise.v3.services.impl.GrizzlyService.postConstruct(GrizzlyService.java:490)
+[ERROR] at org.jvnet.hk2.internal.ClazzCreator.postConstructMe(ClazzCreator.java:329)
+[ERROR] at org.jvnet.hk2.internal.ClazzCreator.create(ClazzCreator.java:377)
+[ERROR] at org.jvnet.hk2.internal.SystemDescriptor.create(SystemDescriptor.java:471)
+[ERROR] at org.glassfish.hk2.runlevel.internal.AsyncRunLevelContext.findOrCreate(AsyncRunLevelContext.java:227)
+[ERROR] at org.glassfish.hk2.runlevel.RunLevelContext.findOrCreate(RunLevelContext.java:84)
+[ERROR] at org.jvnet.hk2.internal.Utilities.createService(Utilities.java:2064)
+[ERROR] at org.jvnet.hk2.internal.ServiceHandleImpl.getService(ServiceHandleImpl.java:105)
+[ERROR] at org.jvnet.hk2.internal.ServiceHandleImpl.getService(ServiceHandleImpl.java:87)
+[ERROR] at org.glassfish.hk2.runlevel.internal.CurrentTaskFuture$QueueRunner.oneJob(CurrentTaskFuture.java:1212)
+[ERROR] at org.glassfish.hk2.runlevel.internal.CurrentTaskFuture$QueueRunner.run(CurrentTaskFuture.java:1143)
+[ERROR] at org.glassfish.hk2.runlevel.internal.CurrentTaskFuture$UpOneLevel.run(CurrentTaskFuture.java:761)
+[ERROR] at org.glassfish.hk2.runlevel.internal.CurrentTaskFuture$UpAllTheWay.go(CurrentTaskFuture.java:560)
+[ERROR] at org.glassfish.hk2.runlevel.internal.CurrentTaskFuture$UpAllTheWay.access$100(CurrentTaskFuture.java:442)
+[ERROR] at org.glassfish.hk2.runlevel.internal.CurrentTaskFuture.go(CurrentTaskFuture.java:153)
+[ERROR] at org.glassfish.hk2.runlevel.internal.CurrentTaskFuture.go(CurrentTaskFuture.java:148)
+[ERROR] at org.glassfish.hk2.runlevel.internal.AsyncRunLevelContext.proceedTo(AsyncRunLevelContext.java:435)
+[ERROR] at org.glassfish.hk2.runlevel.internal.RunLevelControllerImpl.proceedTo(RunLevelControllerImpl.java:70)
+[ERROR] at com.sun.enterprise.v3.server.AppServerStartup.proceedTo(AppServerStartup.java:534)
+[ERROR] at com.sun.enterprise.v3.server.AppServerStartup.run(AppServerStartup.java:331)
+[ERROR] at com.sun.enterprise.v3.server.AppServerStartup.doStart(AppServerStartup.java:228)
+[ERROR] at com.sun.enterprise.v3.server.AppServerStartup.start(AppServerStartup.java:219)
+[ERROR] at com.sun.enterprise.glassfish.bootstrap.GlassFishImpl.start(GlassFishImpl.java:79)
+[ERROR] at fi.jasoft.plugin.PayaraServerRunner.main(PayaraServerRunner.java:56)
+[ERROR] 
+[ERROR] Jun 19, 2016 11:40:45 AM com.sun.enterprise.v3.admin.StopServer doExecute
+[ERROR] INFO: Server shutdown initiated
+[ERROR] Jun 19, 2016 11:40:49 AM com.sun.enterprise.security.SecurityLifecycle <init>
+[ERROR] INFO: Java security manager is disabled.
+[ERROR] Jun 19, 2016 11:40:49 AM com.sun.enterprise.security.SecurityLifecycle onInitialization
+[ERROR] INFO: Entering Security Startup Service.
+[ERROR] Jun 19, 2016 11:40:49 AM com.sun.enterprise.security.PolicyLoader loadPolicy
+[ERROR] INFO: Loading policy provider com.sun.enterprise.security.jacc.provider.SimplePolicyProvider.
+[ERROR] Jun 19, 2016 11:40:49 AM com.sun.enterprise.security.auth.realm.Realm doInstantiate
+[ERROR] INFO: Realm [admin-realm] of classtype [com.sun.enterprise.security.auth.realm.file.FileRealm] successfully created.
+[ERROR] Jun 19, 2016 11:40:49 AM com.sun.enterprise.security.auth.realm.Realm doInstantiate
+[ERROR] INFO: Realm [file] of classtype [com.sun.enterprise.security.auth.realm.file.FileRealm] successfully created.
+[ERROR] Jun 19, 2016 11:40:49 AM com.sun.enterprise.security.auth.realm.Realm doInstantiate
+[ERROR] INFO: Realm [certificate] of classtype [com.sun.enterprise.security.auth.realm.certificate.CertificateRealm] successfully created.
+[ERROR] Jun 19, 2016 11:40:49 AM com.sun.enterprise.security.SecurityLifecycle onInitialization
+[ERROR] INFO: Security Service(s) started successfully.
+[ERROR] Jun 19, 2016 11:40:50 AM com.sun.enterprise.web.WebContainer createHttpListener
+[ERROR] INFO: Created HTTP listener http-listener on host/port 0.0.0.0:8080
+[ERROR] Jun 19, 2016 11:40:50 AM com.sun.enterprise.web.VirtualServer addProbes
+[ERROR] SEVERE: Error adding HttpProbes. NetworkListener http-listeners GrizzlyProxy is NULL
+[ERROR] Jun 19, 2016 11:40:50 AM com.sun.enterprise.web.VirtualServer addProbes
+[ERROR] SEVERE: Error adding HttpProbes. NetworkListener https-listeners GrizzlyProxy is NULL
+[ERROR] Jun 19, 2016 11:40:50 AM com.sun.enterprise.web.WebContainer createHosts
+[ERROR] INFO: Created virtual server server
+[ERROR] Jun 19, 2016 11:40:52 AM org.apache.catalina.realm.JAASRealm setContainer
+[ERROR] INFO: Setting JAAS app name glassfish-web
+[ERROR] Jun 19, 2016 11:40:52 AM com.sun.enterprise.web.WebContainer loadSystemDefaultWebModules
+[ERROR] INFO: Virtual server server loaded default web module
+[ERROR] Jun 19, 2016 11:40:55 AM com.sun.enterprise.web.WebApplication start
+[ERROR] INFO: Loading application [TODOLIST] at [/]
+[ERROR] Jun 19, 2016 11:40:56 AM org.glassfish.deployment.admin.DeployCommand execute
+[ERROR] INFO: TODOLIST was successfully deployed in 9,188 milliseconds.
+[INFO] Listening for transport dt_socket at address: 8000
+[INFO] Found populator: org.glassfish.kernel.embedded.EmbeddedDomainXml
+[ERROR] Jun 19, 2016 12:34:21 PM org.jvnet.hk2.config.ConfigParser handleElement
+[ERROR] SEVERE: Ignoring unrecognized element jms-service at Line number = 101
+[ERROR] Column number = 72
+[ERROR] System Id = null
+[ERROR] Public Id = null
+[ERROR] Location Uri= null
+[ERROR] CharacterOffset = 5783
+[ERROR] 
+[ERROR] Jun 19, 2016 12:34:22 PM org.glassfish.security.services.impl.authorization.AuthorizationServiceImpl initialize
+[ERROR] INFO: Authorization Service has successfully initialized.
+[ERROR] Jun 19, 2016 12:34:23 PM org.hibernate.validator.internal.util.Version <clinit>
+[ERROR] INFO: HV000001: Hibernate Validator 5.1.2.Final
+[ERROR] Jun 19, 2016 12:34:25 PM org.glassfish.grizzly.config.Utils newInstance
+[ERROR] WARNING: Instance could not be initialized. Class=interface org.glassfish.grizzly.http.server.AddOn, name=http-listener, realClassName=org.glassfish.grizzly.http2.Http2AddOn
+[ERROR] Jun 19, 2016 12:34:25 PM com.sun.enterprise.v3.services.impl.GrizzlyService createNetworkProxy
+[ERROR] INFO: Network listener https-listener on port 0 disabled per domain.xml
+[ERROR] Jun 19, 2016 12:34:25 PM com.sun.enterprise.v3.admin.adapter.AdminEndpointDecider setGuiContextRoot
+[ERROR] INFO: Admin Console Adapter: context root: /admin
+[ERROR] Jun 19, 2016 12:34:25 PM com.sun.enterprise.v3.admin.adapter.AdminEndpointDecider setGuiContextRoot
+[ERROR] INFO: Admin Console Adapter: context root: /admin
+[ERROR] Jun 19, 2016 12:34:25 PM com.sun.enterprise.v3.admin.adapter.AdminEndpointDecider setGuiContextRoot
+[ERROR] INFO: Admin Console Adapter: context root: /admin
+[ERROR] Jun 19, 2016 12:34:27 PM com.sun.enterprise.v3.server.AppServerStartup postStartupJob
+[ERROR] INFO: Undefined Product Name - define product and version info in config/branding  0.0.0.0.0  (0) startup time : Embedded (4,331ms), startup services(3,416ms), total(7,747ms)
+[ERROR] Jun 19, 2016 12:34:27 PM com.sun.enterprise.v3.server.AppServerStartup postStartupJob
+[ERROR] SEVERE: Shutting down server due to startup exception
+[ERROR] java.net.BindException: Address already in use
+[ERROR] at sun.nio.ch.Net.bind0(Native Method)
+[ERROR] at sun.nio.ch.Net.bind(Net.java:433)
+[ERROR] at sun.nio.ch.Net.bind(Net.java:425)
+[ERROR] at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+[ERROR] at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+[ERROR] at org.glassfish.grizzly.nio.transport.TCPNIOBindingHandler.bindToChannelAndAddress(TCPNIOBindingHandler.java:131)
+[ERROR] at org.glassfish.grizzly.nio.transport.TCPNIOBindingHandler.bind(TCPNIOBindingHandler.java:88)
+[ERROR] at org.glassfish.grizzly.nio.transport.TCPNIOTransport.bind(TCPNIOTransport.java:248)
+[ERROR] at org.glassfish.grizzly.nio.transport.TCPNIOTransport.bind(TCPNIOTransport.java:237)
+[ERROR] at org.glassfish.grizzly.nio.transport.TCPNIOTransport.bind(TCPNIOTransport.java:86)
+[ERROR] at org.glassfish.grizzly.config.GenericGrizzlyListener.start(GenericGrizzlyListener.java:185)
+[ERROR] at com.sun.enterprise.v3.services.impl.GlassfishNetworkListener.start(GlassfishNetworkListener.java:110)
+[ERROR] at com.sun.enterprise.v3.services.impl.GrizzlyProxy.start0(GrizzlyProxy.java:267)
+[ERROR] at com.sun.enterprise.v3.services.impl.GrizzlyProxy.start(GrizzlyProxy.java:241)
+[ERROR] at com.sun.enterprise.v3.services.impl.GrizzlyService.createNetworkProxy(GrizzlyService.java:567)
+[ERROR] at com.sun.enterprise.v3.services.impl.GrizzlyService.postConstruct(GrizzlyService.java:490)
+[ERROR] at org.jvnet.hk2.internal.ClazzCreator.postConstructMe(ClazzCreator.java:329)
+[ERROR] at org.jvnet.hk2.internal.ClazzCreator.create(ClazzCreator.java:377)
+[ERROR] at org.jvnet.hk2.internal.SystemDescriptor.create(SystemDescriptor.java:471)
+[ERROR] at org.glassfish.hk2.runlevel.internal.AsyncRunLevelContext.findOrCreate(AsyncRunLevelContext.java:227)
+[ERROR] at org.glassfish.hk2.runlevel.RunLevelContext.findOrCreate(RunLevelContext.java:84)
+[ERROR] at org.jvnet.hk2.internal.Utilities.createService(Utilities.java:2064)
+[ERROR] at org.jvnet.hk2.internal.ServiceHandleImpl.getService(ServiceHandleImpl.java:105)
+[ERROR] at org.jvnet.hk2.internal.ServiceHandleImpl.getService(ServiceHandleImpl.java:87)
+[ERROR] at org.glassfish.hk2.runlevel.internal.CurrentTaskFuture$QueueRunner.oneJob(CurrentTaskFuture.java:1212)
+[ERROR] at org.glassfish.hk2.runlevel.internal.CurrentTaskFuture$QueueRunner.run(CurrentTaskFuture.java:1143)
+[ERROR] at org.glassfish.hk2.runlevel.internal.CurrentTaskFuture$UpOneLevel.run(CurrentTaskFuture.java:761)
+[ERROR] at org.glassfish.hk2.runlevel.internal.CurrentTaskFuture$UpAllTheWay.go(CurrentTaskFuture.java:560)
+[ERROR] at org.glassfish.hk2.runlevel.internal.CurrentTaskFuture$UpAllTheWay.access$100(CurrentTaskFuture.java:442)
+[ERROR] at org.glassfish.hk2.runlevel.internal.CurrentTaskFuture.go(CurrentTaskFuture.java:153)
+[ERROR] at org.glassfish.hk2.runlevel.internal.CurrentTaskFuture.go(CurrentTaskFuture.java:148)
+[ERROR] at org.glassfish.hk2.runlevel.internal.AsyncRunLevelContext.proceedTo(AsyncRunLevelContext.java:435)
+[ERROR] at org.glassfish.hk2.runlevel.internal.RunLevelControllerImpl.proceedTo(RunLevelControllerImpl.java:70)
+[ERROR] at com.sun.enterprise.v3.server.AppServerStartup.proceedTo(AppServerStartup.java:534)
+[ERROR] at com.sun.enterprise.v3.server.AppServerStartup.run(AppServerStartup.java:331)
+[ERROR] at com.sun.enterprise.v3.server.AppServerStartup.doStart(AppServerStartup.java:228)
+[ERROR] at com.sun.enterprise.v3.server.AppServerStartup.start(AppServerStartup.java:219)
+[ERROR] at com.sun.enterprise.glassfish.bootstrap.GlassFishImpl.start(GlassFishImpl.java:79)
+[ERROR] at fi.jasoft.plugin.PayaraServerRunner.main(PayaraServerRunner.java:56)
+[ERROR] 
+[ERROR] Jun 19, 2016 12:34:27 PM com.sun.enterprise.v3.admin.StopServer doExecute
+[ERROR] INFO: Server shutdown initiated
+[ERROR] Jun 19, 2016 12:34:33 PM com.sun.enterprise.security.SecurityLifecycle <init>
+[ERROR] INFO: Java security manager is disabled.
+[ERROR] Jun 19, 2016 12:34:33 PM com.sun.enterprise.security.SecurityLifecycle onInitialization
+[ERROR] INFO: Entering Security Startup Service.
+[ERROR] Jun 19, 2016 12:34:33 PM com.sun.enterprise.security.PolicyLoader loadPolicy
+[ERROR] INFO: Loading policy provider com.sun.enterprise.security.jacc.provider.SimplePolicyProvider.
+[ERROR] Jun 19, 2016 12:34:33 PM com.sun.enterprise.security.auth.realm.Realm doInstantiate
+[ERROR] INFO: Realm [admin-realm] of classtype [com.sun.enterprise.security.auth.realm.file.FileRealm] successfully created.
+[ERROR] Jun 19, 2016 12:34:33 PM com.sun.enterprise.security.auth.realm.Realm doInstantiate
+[ERROR] INFO: Realm [file] of classtype [com.sun.enterprise.security.auth.realm.file.FileRealm] successfully created.
+[ERROR] Jun 19, 2016 12:34:33 PM com.sun.enterprise.security.auth.realm.Realm doInstantiate
+[ERROR] INFO: Realm [certificate] of classtype [com.sun.enterprise.security.auth.realm.certificate.CertificateRealm] successfully created.
+[ERROR] Jun 19, 2016 12:34:33 PM com.sun.enterprise.security.SecurityLifecycle onInitialization
+[ERROR] INFO: Security Service(s) started successfully.
+[ERROR] Jun 19, 2016 12:34:34 PM com.sun.enterprise.web.WebContainer createHttpListener
+[ERROR] INFO: Created HTTP listener http-listener on host/port 0.0.0.0:8080
+[ERROR] Jun 19, 2016 12:34:34 PM com.sun.enterprise.web.VirtualServer addProbes
+[ERROR] SEVERE: Error adding HttpProbes. NetworkListener http-listeners GrizzlyProxy is NULL
+[ERROR] Jun 19, 2016 12:34:34 PM com.sun.enterprise.web.VirtualServer addProbes
+[ERROR] SEVERE: Error adding HttpProbes. NetworkListener https-listeners GrizzlyProxy is NULL
+[ERROR] Jun 19, 2016 12:34:34 PM com.sun.enterprise.web.WebContainer createHosts
+[ERROR] INFO: Created virtual server server
+[ERROR] Jun 19, 2016 12:34:36 PM org.apache.catalina.realm.JAASRealm setContainer
+[ERROR] INFO: Setting JAAS app name glassfish-web
+[ERROR] Jun 19, 2016 12:34:36 PM com.sun.enterprise.web.WebContainer loadSystemDefaultWebModules
+[ERROR] INFO: Virtual server server loaded default web module
+[ERROR] Jun 19, 2016 12:34:41 PM com.sun.enterprise.web.WebApplication start
+[ERROR] INFO: Loading application [TODOLIST] at [/]
+[ERROR] Jun 19, 2016 12:34:41 PM org.glassfish.deployment.admin.DeployCommand execute
+[ERROR] INFO: TODOLIST was successfully deployed in 12,107 milliseconds.
+[INFO] Listening for transport dt_socket at address: 8000
+[INFO] Found populator: org.glassfish.kernel.embedded.EmbeddedDomainXml
+[ERROR] Jun 19, 2016 1:13:33 PM org.jvnet.hk2.config.ConfigParser handleElement
+[ERROR] SEVERE: Ignoring unrecognized element jms-service at Line number = 101
+[ERROR] Column number = 72
+[ERROR] System Id = null
+[ERROR] Public Id = null
+[ERROR] Location Uri= null
+[ERROR] CharacterOffset = 5783
+[ERROR] 
+[ERROR] Jun 19, 2016 1:13:34 PM org.glassfish.security.services.impl.authorization.AuthorizationServiceImpl initialize
+[ERROR] INFO: Authorization Service has successfully initialized.
+[ERROR] Jun 19, 2016 1:13:34 PM org.hibernate.validator.internal.util.Version <clinit>
+[ERROR] INFO: HV000001: Hibernate Validator 5.1.2.Final
+[ERROR] Jun 19, 2016 1:13:36 PM org.glassfish.grizzly.config.Utils newInstance
+[ERROR] WARNING: Instance could not be initialized. Class=interface org.glassfish.grizzly.http.server.AddOn, name=http-listener, realClassName=org.glassfish.grizzly.http2.Http2AddOn
+[ERROR] Jun 19, 2016 1:13:36 PM com.sun.enterprise.v3.services.impl.GrizzlyService createNetworkProxy
+[ERROR] INFO: Network listener https-listener on port 0 disabled per domain.xml
+[ERROR] Jun 19, 2016 1:13:36 PM com.sun.enterprise.v3.admin.adapter.AdminEndpointDecider setGuiContextRoot
+[ERROR] INFO: Admin Console Adapter: context root: /admin
+[ERROR] Jun 19, 2016 1:13:36 PM com.sun.enterprise.v3.admin.adapter.AdminEndpointDecider setGuiContextRoot
+[ERROR] INFO: Admin Console Adapter: context root: /admin
+[ERROR] Jun 19, 2016 1:13:36 PM com.sun.enterprise.v3.admin.adapter.AdminEndpointDecider setGuiContextRoot
+[ERROR] INFO: Admin Console Adapter: context root: /admin
+[ERROR] Jun 19, 2016 1:13:37 PM com.sun.enterprise.v3.server.AppServerStartup postStartupJob
+[ERROR] INFO: Undefined Product Name - define product and version info in config/branding  0.0.0.0.0  (0) startup time : Embedded (3,425ms), startup services(2,768ms), total(6,193ms)
+[ERROR] Jun 19, 2016 1:13:37 PM com.sun.enterprise.v3.server.AppServerStartup postStartupJob
+[ERROR] SEVERE: Shutting down server due to startup exception
+[ERROR] java.net.BindException: Address already in use
+[ERROR] at sun.nio.ch.Net.bind0(Native Method)
+[ERROR] at sun.nio.ch.Net.bind(Net.java:433)
+[ERROR] at sun.nio.ch.Net.bind(Net.java:425)
+[ERROR] at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+[ERROR] at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+[ERROR] at org.glassfish.grizzly.nio.transport.TCPNIOBindingHandler.bindToChannelAndAddress(TCPNIOBindingHandler.java:131)
+[ERROR] at org.glassfish.grizzly.nio.transport.TCPNIOBindingHandler.bind(TCPNIOBindingHandler.java:88)
+[ERROR] at org.glassfish.grizzly.nio.transport.TCPNIOTransport.bind(TCPNIOTransport.java:248)
+[ERROR] at org.glassfish.grizzly.nio.transport.TCPNIOTransport.bind(TCPNIOTransport.java:237)
+[ERROR] at org.glassfish.grizzly.nio.transport.TCPNIOTransport.bind(TCPNIOTransport.java:86)
+[ERROR] at org.glassfish.grizzly.config.GenericGrizzlyListener.start(GenericGrizzlyListener.java:185)
+[ERROR] at com.sun.enterprise.v3.services.impl.GlassfishNetworkListener.start(GlassfishNetworkListener.java:110)
+[ERROR] at com.sun.enterprise.v3.services.impl.GrizzlyProxy.start0(GrizzlyProxy.java:267)
+[ERROR] at com.sun.enterprise.v3.services.impl.GrizzlyProxy.start(GrizzlyProxy.java:241)
+[ERROR] at com.sun.enterprise.v3.services.impl.GrizzlyService.createNetworkProxy(GrizzlyService.java:567)
+[ERROR] at com.sun.enterprise.v3.services.impl.GrizzlyService.postConstruct(GrizzlyService.java:490)
+[ERROR] at org.jvnet.hk2.internal.ClazzCreator.postConstructMe(ClazzCreator.java:329)
+[ERROR] at org.jvnet.hk2.internal.ClazzCreator.create(ClazzCreator.java:377)
+[ERROR] at org.jvnet.hk2.internal.SystemDescriptor.create(SystemDescriptor.java:471)
+[ERROR] at org.glassfish.hk2.runlevel.internal.AsyncRunLevelContext.findOrCreate(AsyncRunLevelContext.java:227)
+[ERROR] at org.glassfish.hk2.runlevel.RunLevelContext.findOrCreate(RunLevelContext.java:84)
+[ERROR] at org.jvnet.hk2.internal.Utilities.createService(Utilities.java:2064)
+[ERROR] at org.jvnet.hk2.internal.ServiceHandleImpl.getService(ServiceHandleImpl.java:105)
+[ERROR] at org.jvnet.hk2.internal.ServiceHandleImpl.getService(ServiceHandleImpl.java:87)
+[ERROR] at org.glassfish.hk2.runlevel.internal.CurrentTaskFuture$QueueRunner.oneJob(CurrentTaskFuture.java:1212)
+[ERROR] at org.glassfish.hk2.runlevel.internal.CurrentTaskFuture$QueueRunner.run(CurrentTaskFuture.java:1143)
+[ERROR] at org.glassfish.hk2.runlevel.internal.CurrentTaskFuture$UpOneLevel.run(CurrentTaskFuture.java:761)
+[ERROR] at org.glassfish.hk2.runlevel.internal.CurrentTaskFuture$UpAllTheWay.go(CurrentTaskFuture.java:560)
+[ERROR] at org.glassfish.hk2.runlevel.internal.CurrentTaskFuture$UpAllTheWay.access$100(CurrentTaskFuture.java:442)
+[ERROR] at org.glassfish.hk2.runlevel.internal.CurrentTaskFuture.go(CurrentTaskFuture.java:153)
+[ERROR] at org.glassfish.hk2.runlevel.internal.CurrentTaskFuture.go(CurrentTaskFuture.java:148)
+[ERROR] at org.glassfish.hk2.runlevel.internal.AsyncRunLevelContext.proceedTo(AsyncRunLevelContext.java:435)
+[ERROR] at org.glassfish.hk2.runlevel.internal.RunLevelControllerImpl.proceedTo(RunLevelControllerImpl.java:70)
+[ERROR] at com.sun.enterprise.v3.server.AppServerStartup.proceedTo(AppServerStartup.java:534)
+[ERROR] at com.sun.enterprise.v3.server.AppServerStartup.run(AppServerStartup.java:331)
+[ERROR] at com.sun.enterprise.v3.server.AppServerStartup.doStart(AppServerStartup.java:228)
+[ERROR] at com.sun.enterprise.v3.server.AppServerStartup.start(AppServerStartup.java:219)
+[ERROR] at com.sun.enterprise.glassfish.bootstrap.GlassFishImpl.start(GlassFishImpl.java:79)
+[ERROR] at fi.jasoft.plugin.PayaraServerRunner.main(PayaraServerRunner.java:56)
+[ERROR] 
+[ERROR] Jun 19, 2016 1:13:38 PM com.sun.enterprise.v3.admin.StopServer doExecute
+[ERROR] INFO: Server shutdown initiated
+[ERROR] Jun 19, 2016 1:13:41 PM com.sun.enterprise.security.SecurityLifecycle <init>
+[ERROR] INFO: Java security manager is disabled.
+[ERROR] Jun 19, 2016 1:13:41 PM com.sun.enterprise.security.SecurityLifecycle onInitialization
+[ERROR] INFO: Entering Security Startup Service.
+[ERROR] Jun 19, 2016 1:13:41 PM com.sun.enterprise.security.PolicyLoader loadPolicy
+[ERROR] INFO: Loading policy provider com.sun.enterprise.security.jacc.provider.SimplePolicyProvider.
+[ERROR] Jun 19, 2016 1:13:41 PM com.sun.enterprise.security.auth.realm.Realm doInstantiate
+[ERROR] INFO: Realm [admin-realm] of classtype [com.sun.enterprise.security.auth.realm.file.FileRealm] successfully created.
+[ERROR] Jun 19, 2016 1:13:41 PM com.sun.enterprise.security.auth.realm.Realm doInstantiate
+[ERROR] INFO: Realm [file] of classtype [com.sun.enterprise.security.auth.realm.file.FileRealm] successfully created.
+[ERROR] Jun 19, 2016 1:13:41 PM com.sun.enterprise.security.auth.realm.Realm doInstantiate
+[ERROR] INFO: Realm [certificate] of classtype [com.sun.enterprise.security.auth.realm.certificate.CertificateRealm] successfully created.
+[ERROR] Jun 19, 2016 1:13:42 PM com.sun.enterprise.security.SecurityLifecycle onInitialization
+[ERROR] INFO: Security Service(s) started successfully.
+[ERROR] Jun 19, 2016 1:13:43 PM com.sun.enterprise.web.WebContainer createHttpListener
+[ERROR] INFO: Created HTTP listener http-listener on host/port 0.0.0.0:8080
+[ERROR] Jun 19, 2016 1:13:43 PM com.sun.enterprise.web.VirtualServer addProbes
+[ERROR] SEVERE: Error adding HttpProbes. NetworkListener http-listeners GrizzlyProxy is NULL
+[ERROR] Jun 19, 2016 1:13:43 PM com.sun.enterprise.web.VirtualServer addProbes
+[ERROR] SEVERE: Error adding HttpProbes. NetworkListener https-listeners GrizzlyProxy is NULL
+[ERROR] Jun 19, 2016 1:13:43 PM com.sun.enterprise.web.WebContainer createHosts
+[ERROR] INFO: Created virtual server server
+[ERROR] Jun 19, 2016 1:13:44 PM org.apache.catalina.realm.JAASRealm setContainer
+[ERROR] INFO: Setting JAAS app name glassfish-web
+[ERROR] Jun 19, 2016 1:13:44 PM com.sun.enterprise.web.WebContainer loadSystemDefaultWebModules
+[ERROR] INFO: Virtual server server loaded default web module
+[ERROR] Jun 19, 2016 1:13:47 PM com.sun.enterprise.web.WebApplication start
+[ERROR] INFO: Loading application [TODOLIST] at [/]
+[ERROR] Jun 19, 2016 1:13:48 PM org.glassfish.deployment.admin.DeployCommand execute
+[ERROR] INFO: TODOLIST was successfully deployed in 8,521 milliseconds.
