@@ -19,7 +19,7 @@ public class TODOLISTUI extends UI{
     @Override
     protected void init(VaadinRequest request){
 
-       Connection connection =  MysqlJavaConnector.getConnection();
+        Connection connection =  MysqlJavaConnector.getConnection();
 
         System.out.println(connection);
 
@@ -70,15 +70,29 @@ public class TODOLISTUI extends UI{
                 PreparedStatement item = connection.prepareStatement("SELECT*FROM list");
 
                 ResultSet result = item.executeQuery();
+                int count = 0;
 
                 while(result.next()){
-                   // System.out.println(result.getString("name"));
+                    // System.out.println(result.getString("name"));
 
-                    Label itemLabel = new Label(result.getString("name"));
-                    formLayout.addComponent(itemLabel);
+                    if (count == 0) {
+
+                        Label itemLabel = new Label(result.getString("name"));
+                        formLayout.addComponent(itemLabel);
+                    }
+
+                    else if (count>=1){
+
+                        PreparedStatement newItem = connection.prepareStatement("SELECT * FROM list WHERE id = (SELECT MAX(id) FROM list)");
+
+                        ResultSet newResult = newItem.executeQuery();
+                        Label newItemLabel = new Label(newResult.getString("name"));
+                        formLayout.addComponent(newItemLabel);
+                    }
+                    count++;
                 }
 
-               // connection.close();
+                // connection.close();
               /*  Label tableItem = new Label();
                 formLayout.addComponent(tableItem);*/
 
