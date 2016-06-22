@@ -1,4 +1,5 @@
 package com.example.todolist;
+
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.ui.UI;
 import com.vaadin.ui.Label;
@@ -9,36 +10,33 @@ import com.vaadin.ui.FormLayout;
 import com.vaadin.ui.Alignment;
 import com.vaadin.ui.*;
 import com.mysql.MysqlJavaConnector;
+
 import java.sql.*;
 
 import java.sql.Connection;
 
 @Theme("TODOLIST")
-public class TODOLISTUI extends UI{
+public class TODOLISTUI extends UI {
 
     @Override
-    protected void init(VaadinRequest request){
+    protected void init(VaadinRequest request) {
 
-        Connection connection =  MysqlJavaConnector.getConnection();
+        Connection connection = MysqlJavaConnector.getConnection();
 
         System.out.println(connection);
 
-
-
-
-
-        VerticalLayout content = new VerticalLayout();
+        HorizontalLayout content = new HorizontalLayout();
         setContent(content);
 
         content.setSizeFull();
-        setSizeFull();
+        content.setMargin(true);
+//        setSizeFull();
 
         FormLayout formLayout = new FormLayout();
-
+        formLayout.setWidth("400px");
         formLayout.setMargin(true);
 
         content.addComponent(formLayout);
-        content.setExpandRatio(formLayout, 1);
 
         formLayout.addComponent(new Label("TO-DO LIST"));
 
@@ -48,6 +46,13 @@ public class TODOLISTUI extends UI{
         Button addItemButton = new Button("Add new item");
         formLayout.addComponent(addItemButton);
 
+
+        Panel panel = new Panel();
+        panel.setSizeFull();
+        VerticalLayout base = new VerticalLayout();
+        panel.setContent(base);
+        content.addComponent(panel);
+        content.setExpandRatio(panel, 1);
         addItemButton.addClickListener(e -> {
             //Label itemLabel = new Label(typeItem.getValue());
             //formLayout.addComponent(itemLabel);
@@ -62,7 +67,7 @@ public class TODOLISTUI extends UI{
                 //PreparedStatement insert = connection.prepareStatement("INSERT INTO managelist(name)VALUES (itemValue)");
                 //insert.setString(1,itemValue);
 
-                String query = "INSERT INTO list (name) " +"VALUES ('"+itemValue+"')";
+                String query = "INSERT INTO list (name) " + "VALUES ('" + itemValue + "')";
 
                 st.executeUpdate(query);
                 //insert.execute();
@@ -70,27 +75,33 @@ public class TODOLISTUI extends UI{
                 PreparedStatement item = connection.prepareStatement("SELECT*FROM list");
 
                 ResultSet result = item.executeQuery();
-                int count = 0;
+                //int count = 0;
 
-                while(result.next()){
+                base.removeAllComponents();
+                while (result.next()) {
                     // System.out.println(result.getString("name"));
 
-                    if (count == 0) {
+                    //if (count == 0) {
 
-                        Label itemLabel = new Label(result.getString("name"));
-                        formLayout.addComponent(itemLabel);
-                    }
+                    Label itemLabel = new Label(result.getString("name"));
+                    base.addComponent(itemLabel,0);
+                   /* }
 
-                    else if (count>=1){
+                    else {
 
-                        PreparedStatement newItem = connection.prepareStatement("SELECT * FROM list WHERE id = (SELECT MAX(id) FROM list)");
+                       // Label itemLabel = new Label(result.getString("name"));
+                        //formLayout.addComponent(itemLabel);
+                       // "SELECT * FROM list WHERE id = (SELECT MAX(id) FROM list)"
+
+                        PreparedStatement newItem = connection.prepareStatement("SELECT*FROM list ORDER BY id DESC LIMIT 1");
 
                         ResultSet newResult = newItem.executeQuery();
                         Label newItemLabel = new Label(newResult.getString("name"));
                         formLayout.addComponent(newItemLabel);
                     }
-                    count++;
+                    count++;*/
                 }
+                //System.out.println(count);
 
                 // connection.close();
               /*  Label tableItem = new Label();
@@ -106,10 +117,7 @@ public class TODOLISTUI extends UI{
         });
 
 
-
         content.setComponentAlignment(formLayout, Alignment.TOP_CENTER);
-
-
 
 
     }
